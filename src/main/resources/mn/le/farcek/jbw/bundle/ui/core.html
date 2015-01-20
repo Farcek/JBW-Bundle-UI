@@ -1,0 +1,26 @@
+<uiSuccessMessage>
+{% macro uiSuccessMessage(isSuccess,message)%}
+{% if isSuccess is not null and isSuccess %}
+<div class="alert alert-success">{{message}}</div>
+{% endif%}
+{% endmacro%}
+</uiSuccessMessage>
+
+<uiErrorMessage>
+{% macro uiErrorMessage(isError,message)%}
+{% if isError is not null and isError %}
+<div class="alert alert-warning">{{message}}</div>
+{% endif%}
+{% endmacro%}
+</uiErrorMessage>
+
+<uiSuccessOrError>
+{% macro uiSuccessOrError(success,error)%}
+{% if seccess is not empty %}
+<div class="alert alert-success">{{success}}</div>
+{% endif%}
+{% if error is not empty %}
+<div class="alert alert-warning">{{error}}</div>
+{% endif%}
+{% endmacro%}
+</uiSuccessOrError>
